@@ -1,5 +1,5 @@
 const taskInput = document.getElementById("taskInput");
-const addTask = document.getElementById("addTask");
+const addTaskBtn = document.getElementById("addTask");
 const taskList = document.getElementById("taskList");
 
 addTaskBtn.addEventListener("click", () => {
