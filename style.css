@@ -5,8 +5,8 @@ body {
     padding: 20px;
     background: #f7f7f7ff;
     text-align: center;
-    
-    
+
+
 }
 
 /* Header */
@@ -30,15 +30,89 @@ section {
     width: 80%;
     max-width: 800px;
     text-align: left;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-ol, ul {
+ol,
+ul {
     padding-left: 20px;
 }
 
 /* projects */
 
+#projects {
+    background: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+#projects p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* project card layout */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Individual project card */
+.projects-box {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 25px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3 ease;
+}
+
+.projects-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.projects-box h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #0077b6;
+}
+
+.projects-box p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Project Links */
+.projects-box a {
+    display: inline-block;
+    text-decoration: none;
+    background: #0077b6;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: background 0.3s ease;
+
+}
+
+.projects-box a:hover {
+    background: #023e8a;
+}
+
+/* }
 .projects-container {
     border: 1px solid #ddd;
     padding: 20px;
@@ -77,10 +151,11 @@ ol, ul {
     width: 50px;
     font-size: 16px;
     cursor: pointer;
-}
+} */
 
 /* contact form */
- input, textarea {
+input,
+textarea {
     display: block;
     width: 100%;
     margin: 10px auto;
@@ -115,9 +190,17 @@ footer {
         padding: 20px;
         font-size: 16px;
     }
+
     .project {
         width: 100%;
         margin-bottom: 20px;
     }
-}
 
+    .projects-container {
+        display: block;
+    }
+
+    .projects-container {
+        margin-bottom: 20px;
+    }
+}
