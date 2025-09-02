@@ -1,20 +1,17 @@
-const taskInput = document.getElementById("taskInput");
-const addTaskBtn = document.getElementById("addTask");
-const taskList = document.getElementById("taskList");
-
-addTaskBtn.addEventListener("click", () => {
+function addTask() {
+    const taskInput = document.getElementById("taskInput");
     const taskText = taskInput.value.trim();
-    if (taskText ==="") return;
+    if (taskText === "") return;
 
     const li = document.createElement("li");
     li.textContent = taskText;
 
     const deletBtn = document.createElement("button");
-    deletBtn.textContent = "❌";
-    deletBtn.style.marginLeft = "10px";
-    deletBtn.addEventListener("click", () => li.remove()); 
+    deletBtn.textContent = "Delete";
+    deletBtn.onclick = () => li.remove();
 
     li.appendChild(deletBtn);
-    taskList.appendChild(li);
+    document.getElementById("taskList").appendChild(li);
+
     taskInput.value = "";
-});
+}

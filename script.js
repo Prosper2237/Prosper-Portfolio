@@ -10,104 +10,52 @@ if (hour < 12) {
 }
 
 // Contact form
-document.getElementById("contact-form").addEventListener("submit", function(e){
+document.getElementById("contactForm").addEventListener("submit", function(e){
     e.preventDefault();
-    alert("Thank you! Your message has been received.");
+
+    // Grab values
+    const name = document.querySelector("#contactForm input[type='text'").value;
+    const email = document.querySelector("#contactForm input[type='email'").value;
+    const message = document.querySelector("#contactForm input[type=textarea").value;
+
+    // Basic validation (Optional)
+    if (!name || !email || !message) {
+        document.getElementById("formMessage").textContent = "Please fill out all fields";
+        return 
+    }
+
+    // Show confirmation
+    document.getElementById("formMessage").textContent =
+    `Thanks ${name}! Your message has been received. I'll reply to ${email} soon.`;
+    
+    // Reset form 
+    document.getElementById("formMessage").requestFullscreen();
 });
 
-// To-do list
-function addTask() {
-    const input = document.getElementById("todo-input");
-    const task = input.value.trim();
-    if (task) {
-        const li = document.createElement("li");
-        li.textContent = task
+// ==== optional smoth scroll for nav links ====
+document.querySelectorAll("header nav a").forEach(link => {
+    link.addEventListener("click", function(e) {
+         e.preventDefault();
+         const targetId = this.getAttribute("herf").substring(1);
+    const targetSection = document.getElementById(targetId);
 
-        // Mark as done
-        li.onclick = () => li.classList.toStringggle("completed");
-
-        // delete button
-        const delBtn = document.createElement("button");
-        delBtn.textContent = "❌";
-        delBtn.style.marginLeft = "10px";
-        delBtn.onclick = () => li.remove();
-
-        li.appendChild(delBtn);
-        document.getElementById("todo-list").appendChild(li);
-        input.value = "";
-
+    if (targetSection) {
+        targetSection.scrollIntoView({ behavior: "smoth"});
     }
-}
-// const addBtn = document.getElementById("add-task");
+    });
+});
 
-// const list = document.getElementById("todo-list");
+// ===Fade-in on Scroll===
+const observer = new IntersectionObserver(enteries => {
+    enteries.forEach(entery => {
+        if (entery.isIntersecting) {
+            entery.target.classList.add("visible");
+        }
+    });
+}, {threshold: 0.2 });
 
-// addBtn.addEventListener("click", () => {
-//     if (input.value.trim() !== "") {
-//         const li = document.createElement("li");
-//         li.textContent = input.value;
-
-//         // click to strike through
-//         li.addEventListener("click", () =>{
-//             li.style.textDecoration = 
-//                 li.style.textDecoration === "line-through" ? "none" : "line-through";
-//         });
-//         list.appendChild(li);
-//         input.value = "";
-//     }
-// });
-
-// Calculator
-let calcInput = "";
-function press(value) {
-    calcInput += value;
-    document.getElementById("calc-display").value = calcInput;
-}
-function calculate() {
-    try {
-        document.getElementById("calc-display").value = eval(calcInput);
-        calcInput = "";
-    } catch {
-        document.getElementById("calc-display").value = "Error";
-    }
-}
-function clearCalc() {
-    calcInput = "";
-    document.getElementById("calc-display").value = eval(calcInput);
-}
-
-// const calacBtn = document.getElementById("calc-btn");
-// calacBtn.addEventListener("click", () => {
-//     const num1 = Number(document.getElementById("num1").value);
-//     const num2 = Number(document.getElementById("num2").value);
-//     const sum = num1 + num2;
-//     document.getElementById("calc-result").textContent = `Result: ${sum}`;
-// });
-
-// Random Quote Generator
-const quotes = [
-    "The best way to get started is to quit talking and beging doing.",
-    "Success is not key to happiness. Happiness is key to success.",
-    "It's not weather you get knocked down, it's weather you get up.",
-    "Dream big and dare to fail.",
-    "Believe in yourswelf!",
-    "Code, coffe, repeat.",
-    "Stay curious, stay learning.",
-    "Mistakes are proof you are trying.",
-    "Every expert was once a beginner."
-];
-function newQuote() {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    document.getElementById("quote-display").textContent = quotes[randomIndex];
-}
-// const quotes = [
-//     "Believe in yourswelf!",
-//     "Code, coffe, repeat.",
-//     "Stay curious, stay learning.",
-//     "Mistakes are proof you are trying.",
-//     "Every expert was once a beginner."
-// ];
-// document.getElementById("quote-btn").addEventListener("click", () => {
-//     const random = quotes[Math.floor(Math.random() * quotes.length)];
-//     document.getElementById("quote-display").textContent = random;
-// });
+// Applynfade-in effect to all sections 
+document.querySelectorAll("section").forEach(section => {
+    section.classList.add("fade-in");
+    observer.observe(section)
+});

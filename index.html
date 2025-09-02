@@ -11,26 +11,31 @@
 </head>
 
 <body>
-    <!--Header-->
+    <!-- Navbar -->
     <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p id="greeting"></p>
+        <nav>
+            <h1>Prosper | Full-Stack Developer</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!--About section-->
     <section id="about">
         <h2>About Me</h2>
         <p>
-            Hi — I'm Prosper, a passionate Full-Stack Web Developer. I build modern, responsive,
-            and user-friendly websites with clean code and practical functionality. My focus is
+            Hi, I'm Prosper - a passionate Full-Stack Web Developer. I love building responsive, user-friendly web
+            applications. My focus is
             on creating digital solutions that solve real problems and provide value to people.
             I enjoy working across both frontend and backend technologies, and I'm always exploring
             new tools to sharpen my skills.
         </p>
-    </section>
-    <section id="hobbies">
-        <h2>Hobbies & Interests</h2>
-        <p>Beyond codding, I engage in activities that strengthen my creativity, focus, and problem-solving skills:</p>
+        <h3>Hobbies & Interests</h3>
+        <p>Beyond codding, I engage in activities that strengthen my creativity, focus, and problem-solving skills:
+        </p>
         <!--Unordered list-->
         <h3>Passions That Inspirie Me</h3>
         <ul>
@@ -45,37 +50,36 @@
             <li>Reading tech blogs & books to stay updated with the latest trends</li>
             <li>Building small side-projects to sharpen problem-solving</li>
             <li>Exploring new programming tools and frameworks</li>
+            <li>Master Frontend Development</li>
+            <li>Work with Global Tech Companies</li>
         </ol>
     </section>
 
     <!--Project Section-->
     <section id="projects">
-        <h2>Projects</h2>
+        <h2>My Projects</h2>
         <p>Here are some of the projects I've built while sharpening my skills as a full-stack developer:</p>
 
-        <div class="projects-container">
+        <div class="project-container">
             <!--To Do List App-->
-            <div class="projects-box">
+            <div class="project-card">
                 <h3>✅ To-Do List App</h3>
-                <p>A simple task management app that allows users to add, delete, and mark tasks as completed.
-                It helped me practice working with the DOM, local storage, and clean UI design.</p>
+                <p>A simple task manager app built with Html, Css, and JS.</p>
                 <a href="projects/todo/index.html" target="_blank">View Project</a>
             </div>
 
             <!--Calculator App-->
-            <div class="projects-box">
+            <div class="project-card">
                 <h3>🧮 Calculator App</h3>
-                <p>A fully functional calculator that supports basic arithmetic operations.
-                This project deepened my understanding of JavaScript functions, event listeners, and error handling.
-                </p>
+                <p>Abasic calculator with add, subtract, multiply and divide.</p>
                 <a href="projects/calclator/index.html" target="_blank">View Project</a>
             </div>
+
             <!--Random Quote Generator-->
-            <div class="projects-box">
-            <h3>💡 Random Quote Generator</h3>
-            <p>An interactive app that displays inspirational quotes at the click of a button.
-            It was a fun way to practice JavaScript arrays, randomization logic, and styling with CSS.</p>
-            <a href="projects/quotes/index.html" target="_blank">View Project</a>
+            <div class="project-card">
+                <h3>💡 Random Quote Generator</h3>
+                <p>Generate a random inspirational quote at the click of a button.</p>
+                <a href="projects/quotes/index.html" target="_blank">View Project</a>
             </div>
         </div>
 
@@ -84,18 +88,30 @@
     <!--Contact Section-->
     <section id="contact">
         <h2>Contact Me</h2>
-        <form id="contact-form">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
+        <form id="contactForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Enter your message...." required></textarea>
+            <button type="submit">Send Message</button>
         </form>
+        <p id="formMessage"></p>
+
+        <!-- social links -->
+         <div class="social-links">
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+             <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-twiter"></i></a>
+         </div>
     </section>
 
     <!--Footer-->
     <footer>
-        <p>&copy; 2025 Prosper's Portfolio | Built with ❤️</p>
+        <p>&copy; 2025 Prosper. All right reserved.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 
