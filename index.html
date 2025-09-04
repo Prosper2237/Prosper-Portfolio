@@ -40,16 +40,16 @@
         <!--Unordered list-->
         <h2>Passions That Inspire Me</h2>
         <ul>
-            <li>🌍 Traveling — discovering cultures broadens my perspective</li>
-            <li>🎨 Art & Design — inspires creativity in UI/UX work</li>
-            <li>⚽ Football & Fitness — improves discipline and teamwork</li>
-            <li>🎶 Music — keeps my mind fresh and innovative</li>
-            <li>💻 Coding</li>
+            <li>🌍 Traveling the world</li>
+            <li>🎨 Art & Design</li>
+            <li>⚽ Playing football</li>
+            <li>🎶 Enjoying good music</li>
+            <li>💻 Coding and building projects</li>
         </ul>
         <!--Ordered list-->
         <h3>What Keeps Me Growing</h3>
         <ol>
-            <li>Reading tech blogs & books to stay updated with the latest trends</li>
+            <li>Reading inspiring books</li>
             <li>Building small side-projects to sharpen problem-solving</li>
             <li>Exploring new programming tools and frameworks</li>
             <li>Master Frontend Development</li>
@@ -66,28 +66,27 @@
             <!--To Do List App-->
             <div class="project-card">
                 <h3>✅ To-Do List App</h3>
-                <p>A simple task manager app built with Html, Css, and JS.</p>
-                <button onclick="loadProject('projects/todo/index.html')">View Project</button>
+                <p>Manage your daily task with add/remove.</p>
+                <button class="view-btn" onclick="loadProject('projects/todo/index.html')">View Project</button>
             </div>
 
             <!--Calculator App-->
             <div class="project-card">
                 <h3>🧮 Calculator App</h3>
-                <p>A basic calculator with add, subtract, multiply and divide.</p>
-                <button onclick="loadProject('projects/calculator/index.html')">View Projects</button>
+                <p>A basic calculator that performs simple arithmetic.</p>
+                <button class="view-btn" onclick="loadProject('projects/calculator/index.html')">View Project</button>
             </div>
 
             <!--Random Quote Generator-->
             <div class="project-card">
                 <h3>💡 Random Quote Generator</h3>
-                <p>Generate a random inspirational quote at the click of a button.</p>
-                <button onclick="loadProject('projects/quotes/index.html')">View Project</button>
+                <p>Get a fresh motivational quote with one click.</p>
+                <button class="view-btn" onclick="loadProject('projects/quotes/index.html')">View Project</button>
             </div>
-
-            <!-- Project viewer -->
-             <div id="project-viewer">
-                <iframe id="project-frame" src="frameborder=0"></iframe>
-             </div>
+        </div>
+        <!-- Project viewer -->
+        <div id="project-viewer">
+            <iframe id="project-frame" src="frameborder=0"></iframe>
         </div>
 
     </section>
@@ -118,9 +117,10 @@
             <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://x.com/home" target="_blank"><i class="fab fa-x"></i></a>
             <a href="https://www.instagram.com/improspa_/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/share/1BTnwFDmvS/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.facebook.com/share/1BTnwFDmvS/?mibextid=wwXIfr" target="_blank"><i
+                    class="fab fa-facebook"></i></a>
             <a href="https://wa.me/2347068379050" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
     </section>
 

@@ -33,17 +33,36 @@ document.getElementById("contactForm").addEventListener("submit", function(e){
 });
 
 // ==== optional smoth scroll for nav links ====
-document.querySelectorAll("header nav a").forEach(link => {
-    link.addEventListener("click", function(e) {
+document.querySelectorAll('header nav a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
          e.preventDefault();
-         const targetId = this.getAttribute("herf").substring(1);
-    const targetSection = document.getElementById(targetId);
-
-    if (targetSection) {
-        targetSection.scrollIntoView({ behavior: "smoth"});
-    }
+         const target = document.querySelector(link.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smoth'});
     });
 });
+
+// load a projrct into the iframe and scrool to it
+function loadProject(path) {
+    const viewer = document.getElementById('project-viewer');
+    const frame = document.getElementById('project-frame');
+    frame.src =  path;
+    viewer.scrollIntoView({ behavior: 'smooth'});
+
+
+// auto-resize iframe to fit project height (same-origin)
+frame.addEventListener('load', () => {
+    try {
+        const doc = frame.contentWindow.document;
+        const h = Math.max(
+            doc.body.scrollHeight,
+            doc.documentElement.scrollHeight
+        );
+        if (h && h > 400) frame.style.height = h + 'px';
+     } catch (e) {
+        // if cross-origin, ignore (shouldn't happen for your oun fiels)
+     }
+  }, {once: true});
+}
 
 // ===Fade-in on Scroll===
 const observer = new IntersectionObserver(enteries => {
@@ -77,3 +96,9 @@ function loadProject(path) {
     document.getElementById("project-viewer").scrollIntoView({ behavior: "smooth"});
 }
 
+document.querySelectorAll('header nav a').forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelectorAll(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth'});
+    });
+});
