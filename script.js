@@ -59,3 +59,21 @@ document.querySelectorAll("section").forEach(section => {
     section.classList.add("fade-in");
     observer.observe(section)
 });
+
+// Smooth scroll for nav links
+document.querySelector('a[href^="#]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
+
+// adding script
+function loadProject(path) {
+    const frame = document.getElementById("project-frame");
+    frame.src = path;
+    document.getElementById("project-viewer").scrollIntoView({ behavior: "smooth"});
+}
+

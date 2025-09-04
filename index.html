@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link real="stylesheet" hreflang="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -34,15 +35,16 @@
             new tools to sharpen my skills.
         </p>
         <h3>Hobbies & Interests</h3>
-        <p>Beyond codding, I engage in activities that strengthen my creativity, focus, and problem-solving skills:
+        <p>Beyond coding, I engage in activities that strengthen my creativity, focus, and problem-solving skills:
         </p>
         <!--Unordered list-->
-        <h3>Passions That Inspirie Me</h3>
+        <h2>Passions That Inspire Me</h2>
         <ul>
             <li>🌍 Traveling — discovering cultures broadens my perspective</li>
             <li>🎨 Art & Design — inspires creativity in UI/UX work</li>
             <li>⚽ Football & Fitness — improves discipline and teamwork</li>
-            <li>🎶 Music — keeps my mind fresh and innovative</li>
+            <li>🎶 Music — keeps my mind fresh and innovative</li>
+            <li>💻 Coding</li>
         </ul>
         <!--Ordered list-->
         <h3>What Keeps Me Growing</h3>
@@ -65,22 +67,27 @@
             <div class="project-card">
                 <h3>✅ To-Do List App</h3>
                 <p>A simple task manager app built with Html, Css, and JS.</p>
-                <a href="projects/todo/index.html" target="_blank">View Project</a>
+                <button onclick="loadProject('projects/todo/index.html')">View Project</button>
             </div>
 
             <!--Calculator App-->
             <div class="project-card">
                 <h3>🧮 Calculator App</h3>
-                <p>Abasic calculator with add, subtract, multiply and divide.</p>
-                <a href="projects/calclator/index.html" target="_blank">View Project</a>
+                <p>A basic calculator with add, subtract, multiply and divide.</p>
+                <button onclick="loadProject('projects/calculator/index.html')">View Projects</button>
             </div>
 
             <!--Random Quote Generator-->
             <div class="project-card">
                 <h3>💡 Random Quote Generator</h3>
                 <p>Generate a random inspirational quote at the click of a button.</p>
-                <a href="projects/quotes/index.html" target="_blank">View Project</a>
+                <button onclick="loadProject('projects/quotes/index.html')">View Project</button>
             </div>
+
+            <!-- Project viewer -->
+             <div id="project-viewer">
+                <iframe id="project-frame" src="frameborder=0"></iframe>
+             </div>
         </div>
 
     </section>
@@ -88,28 +95,38 @@
     <!--Contact Section-->
     <section id="contact">
         <h2>Contact Me</h2>
-        <form id="contactForm">
+        <p>Fill out the form or connect with me on social media:</p>
+
+        <!-- Contact form -->
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
             <label for="name">Name</label>
             <input type="text" id="name" placeholder="Enter your name" required>
+
             <label for="email">Email</label>
             <input type="email" id="email" placeholder="Enter your email" required>
+
             <label for="message">Message</label>
-            <textarea id="message" rows="4" placeholder="Enter your message...." required></textarea>
+            <textarea id="message" rows="5" placeholder="Enter your message...." required></textarea>
+
             <button type="submit">Send Message</button>
         </form>
         <p id="formMessage"></p>
 
         <!-- social links -->
-         <div class="social-links">
-            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-             <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-twiter"></i></a>
-         </div>
+        <div class="social-links">
+            <a href="https://github.com/Prosper2237" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/home" target="_blank"><i class="fab fa-x"></i></a>
+            <a href="https://www.instagram.com/improspa_/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1BTnwFDmvS/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/2347068379050" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
     </section>
 
     <!--Footer-->
     <footer>
-        <p>&copy; 2025 Prosper. All right reserved.</p>
+        <p>&copy; 2025 Prosper WebDev. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>

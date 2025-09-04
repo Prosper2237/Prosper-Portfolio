@@ -59,6 +59,19 @@ section {
     text-decoration: none;
 }
 
+/* Project view */
+#project-viewer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#project-frame {
+    width: 100%;
+    max-width: 900px;
+    height: 600px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
 /* social links */
 .social-links {
     margin-top: 25px;
@@ -68,19 +81,29 @@ section {
 }
 
 .social-links a {
-    font-size: 28px;
+    font-size: 30px;
     color: #333;
-    transition: 0.3s ease;
+    transition: color 0.3s ease;
+    margin: 0 10px;
 }
 .social-links a:hover {
-    color: #0077ff;
+    color: #0077b5;
 }
+
+.social-links a:nth-child(1):hover {color: #333;}
+.social-links a:nth-child(2):hover {color: #0077b5;}
+.social-links a:nth-child(3):hover {color: #1da1f2;}
+.social-links a:nth-child(4):hover {color: #d93025;}
+.social-links a:nth-child(5):hover {color: #333;}
+.social-links a:nth-child(6):hover {color: #333;}
+.social-links a:nth-child(7):hover {color: #333;}
 
  footer {
     text-align: center;
-    padding: 1rem;
-     background: #333;
+    padding: 20px;
+     background: #222;
     color: #fff;
+    margin-top: 40px;
  }
 
 /* Fade-in effect for section */
@@ -93,4 +116,33 @@ section {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Contact form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: non;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #45a049;
 }
