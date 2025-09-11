@@ -1,12 +1,12 @@
 const quotes = [
-  "The best way to get started is to quit talking and begin doing.",
-  "Don’t let yesterday take up too much of today.",
-  "It’s not whether you get knocked down, it’s whether you get up.",
-  "If you are working on something exciting, it will keep you motivated.",
-  "Success is not in what you have, but who you are."
+  "Believe in yourself.",
+  "Stay positive, work hard, make it happen.",
+  "Every day is a new beginning.",
+  "Push yourself, because no one else is going to do it for you.",
+  "Success is not final, failure is not fatal: it is the courage to continue that counts."
 ];
 
-function newQuote() {
-  const randomIndex = Math.floor(Math.random() * quotes.length);
-  document.getElementById("quote").textContent = quotes[randomIndex];
-}
+document.getElementById("newQuote").addEventListener("click", () => {
+  const random = Math.floor(Math.random() * quotes.length);
+  document.getElementById("quote").textContent = quotes[random];
+});

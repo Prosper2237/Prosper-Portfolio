@@ -1,15 +1,12 @@
 body {
-    text-align: center;
     font-family: Arial, sans-serif;
-    padding: 20px;
+    text-align: center;
+    margin: 20px;
 }
 
-p {
+#quote {
     font-size: 20px;
-    margin: 20px 0;
-}
-
-button {
-    margin-top: 20px;
+    margin: 20px;
     padding: 10px;
+    font-style: italic;
 }

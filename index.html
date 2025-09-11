@@ -4,129 +4,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prosper's Portfolio</title>
+    <title>Prosper | Full Stack Developer</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link real="stylesheet" hreflang="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Navbar -->
+
+    <!-- Header -->
     <header>
+        <h1>Prosper - Full Stack Developer</h1>
         <nav>
-            <h1>Prosper | Full-Stack Developer</h1>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!--About section-->
+    <!-- About -->
     <section id="about">
         <h2>About Me</h2>
         <p>
-            Hi, I'm Prosper - a passionate Full-Stack Web Developer. I love building responsive, user-friendly web
-            applications. My focus is
-            on creating digital solutions that solve real problems and provide value to people.
-            I enjoy working across both frontend and backend technologies, and I'm always exploring
-            new tools to sharpen my skills.
+            Hi, I’m Prosper 👋, a passionate <strong>Full Stack Web Developer</strong> in training.
+            I enjoy solving problems, building projects, and continuously improving my skills.
         </p>
-        <h3>Hobbies & Interests</h3>
-        <p>Outside of coding, I enjoy activities that keep me creative, curious, and connected...
-        </p>
-        <!--Unordered list-->
-        <h2>Passions That Inspire Me</h2>
+
+        <h3>Hobbies</h3>
         <ul>
-            <li>🌍 Traveling the world</li>
-            <li>🎨 Art & Design</li>
-            <li>⚽ Playing football</li>
-            <li>🎶 Enjoying good music</li>
-            <li>💻 Coding and building projects</li>
+            <li>🌍 Traveling & exploring cultures</li>
+            <li>📚 Reading tech & personal growth books</li>
+            <li>💻 Coding & building projects</li>
+            <li>🎶 Listening to music</li>
         </ul>
-        <!--Ordered list-->
-        <h3>What Keeps Me Growing</h3>
-        <ol>
-            <li>Reading inspiring books</li>
-            <li>Building small side-projects to sharpen problem-solving</li>
-            <li>Exploring new programming tools and frameworks</li>
-            <li>Master Frontend Development</li>
-            <li>Work with Global Tech Companies</li>
-        </ol>
     </section>
 
-    <!--Project Section-->
+    <!-- Projects -->
     <section id="projects">
-        <h2>My Projects</h2>
-        <p>Here are some of the projects I've built while sharpening my skills as a full-stack developer:</p>
-
+        <h2>Projects</h2>
         <div class="project-container">
-            <!--To Do List App-->
+
             <div class="project-card">
-                <h3>✅ To-Do List App</h3>
-                <p>Manage your daily task with add/remove.</p>
-                <button class="view-btn" onclick="loadProject('projects/todo/index.html')">View Project</button>
+
+                <h3>📝 Todo App</h3>
+                <p>A simple app to add and manage daily tasks.</p>
+                <a href="projects/todo/index.html" class="btn" target="_self">View Project</a>
             </div>
 
-            <!--Calculator App-->
             <div class="project-card">
-                <h3>🧮 Calculator App</h3>
-                <p>A basic calculator.....</p>
-                <button class="view-btn" onclick="loadProject('projects/calculator/index.html')">View Project</button>
+
+                <h3>🧮 Calculator</h3>
+                <p>A basic calculator that performs arithmetic operations.</p>
+                <a href="projects/calculator/index.html" class="btn" target="_self">View Project</a>
             </div>
 
-            <!--Random Quote Generator-->
             <div class="project-card">
-                <h3>💡 Random Quote Generator</h3>
-                <p>Get a fresh motivational quote with one click.</p>
-                <button class="view-btn" onclick="loadProject('projects/quotes/index.html')">View Project</button>
+
+                <h3>💡 Quotes Generator</h3>
+                <p>A fun app that shows random motivational quotes.</p>
+                <a href="projects/quotes/index.html" class="btn" target="_self">View Project</a>
             </div>
+
+            <div class="project-card">
+                <h3>🕒 Digital Clock</h3>
+                <p>A simple clock built with JavaScript Date object</p>
+                <a href="projects/clock/index.html" class="btn" target="_self">View Project</a>
+            </div>
+
         </div>
-        <!-- Project viewer -->
-        <div id="project-viewer">
-            <iframe id="project-frame" src="frameborder=0"></iframe>
-        </div>
-
     </section>
 
-    <!--Contact Section-->
+    <!-- Contact -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Fill out the form or connect with me on social media:</p>
-
-        <!-- Contact form -->
-        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Enter your name" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email" required>
-
-            <label for="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Enter your message...." required></textarea>
-
-            <button type="submit">Send Message</button>
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send</button>
         </form>
-        <p id="formMessage"></p>
 
-        <!-- social links -->
+        <!-- Social Media Links -->
         <div class="social-links">
-            <a href="https://github.com/Prosper2237" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/home" target="_blank"><i class="fab fa-x"></i></a>
-            <a href="https://www.instagram.com/improspa_/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/share/1BTnwFDmvS/?mibextid=wwXIfr" target="_blank"><i
-                    class="fab fa-facebook"></i></a>
-            <a href="https://wa.me/2347068379050" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/Prosper2237" target="_self">GitHub</a>
+            <a href="https://linkedin.com/in/https://www.linkedin.com/in/prosper-adogbeji-34bb6b381?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                target="_self">LinkedIn</a>
+            <a href="https://twitter.com/im_prospa" target="_self">Twitter</a>
         </div>
     </section>
 
-    <!--Footer-->
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Prosper WebDev. All rights reserved.</p>
+        <p>© 2025 Prosper - Full Stack Developer</p>
     </footer>
 
     <script src="script.js"></script>

@@ -1,17 +1,11 @@
-function addTask() {
-    const taskInput = document.getElementById("taskInput");
-    const taskText = taskInput.value.trim();
-    if (taskText === "") return;
+document.getElementById("addTask").addEventListener("click", () => {
+    const input = document.getElementById("taskInput");
+    const task = input.value.trim();
 
-    const li = document.createElement("li");
-    li.textContent = taskText;
-
-    const deletBtn = document.createElement("button");
-    deletBtn.textContent = "Delete";
-    deletBtn.onclick = () => li.remove();
-
-    li.appendChild(deletBtn);
-    document.getElementById("taskList").appendChild(li);
-
-    taskInput.value = "";
-}
+    if (task) {
+        const li = document.createElement("li");
+        li.textContent = task;
+        document.getElementById("taskList").appendChild(li);
+        input.value = "";
+    }
+});
