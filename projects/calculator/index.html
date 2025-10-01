@@ -9,29 +9,17 @@
 </head>
 
 <body>
-    <h1>Calculator</h1>
-    <div class="calculator">
-        <input type="text" id="display" disabled>
-        <div class="buttons">
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>/</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>*</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>-</button>
-            <button>0</button>
-            <button>C</button>
-            <button>=</button>
-            <button>+</button>
+    <main class="calc-wrap">
+        <h1>Calculator</h1>
+        <input id="display" type="text" readonly>
+        <div class="keys">
+            <button data-val="7">7</button><button data-val="8">8</button><button data-val="9">9</button><button data-val="/">/</button>
+            <button data-val="4">4</button><button data-val="5">5</button><button data-val="6">6</button><button data-val="*">*</button>
+            <button data-val="1">1</button><button data-val="2">2</button><button data-val="3">3</button><button data-val="-">-</button>   
+            <button data-val="0">0</button><button data-val=".">.</button><button id="clear">C</button><button data-val="+">+</button>
+            <button id="equals" style="grid-column: span 4">=</button>
         </div>
-    </div>
-
+    </main>
     <script src="script.js"></script>
 </body>
 

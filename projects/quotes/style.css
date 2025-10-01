@@ -1,12 +1,33 @@
 body {
-    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: #f4f7fb;
+    font-family: Arial;
+}
+
+.quote-wrap {
+    background: #fff;
+    padding: 26px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgb(0, 0, 0, 0.06);
+    width: 420px;
     text-align: center;
-    margin: 20px;
 }
 
 #quote {
-    font-size: 20px;
-    margin: 20px;
-    padding: 10px;
     font-style: italic;
+    margin: 16px 0;
+    color: #333;
+}
+
+button {
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    background: #0073e6;
+    color: #fff;
+    cursor: pointer;
 }

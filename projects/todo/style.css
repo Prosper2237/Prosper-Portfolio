@@ -1,23 +1,54 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: #f0f2f5;
 }
 
-input,
-button {
+.todo-wrap {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 360px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.input-row {
+    display: flex;
+    gap: 8px;
+}
+
+#taskInput {
+    flex: 1;
     padding: 10px;
-    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+} 
+
+#addTask {
+    padding: 10px 14px;
+    border: none;
+    background: #0073e6;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
-ul {
+#taskList {
     list-style: none;
     padding: 0;
+    margin-top: 12px;
 }
 
-li {
-    margin: 5px 0;
-    background: #f4f4f4;
-    padding: 10px;
-    border-radius: 5px;
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-radius: 6px;
+    background: #f6f8fa;
+    margin-bottom: 8px;
 }

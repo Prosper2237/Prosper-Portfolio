@@ -4,30 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prosper - Full Stack Developer portfolio">
     <title>Prosper | Full Stack Developer</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
     <!-- Header -->
     <header>
-        <h1>Prosper - Full Stack Developer</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="header-inner">
+            <h1 class="brand">Prosper - Full Stack Developer</h1>
+            <nav id="navbar">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#testimonia">Testimonia</a>
+                <a href="#contact">Contact</a>
+                <a herf="cv/cv.html" target="_self">CV</a>
+                <a herf="cv/cv.pdf" download class="download-btn"> 📄 Download CV</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="menuToggle" aria-label="Toggle menu">☰</button>
+                <button id="themToggle" aria-label="Toggle them">🌙</button>
+            </div>
+        </div>
     </header>
 
+    <!-- Greeting -->
+    <section id="greeting" class="centered-section">
+        <h2 id="greetText"></h2>
+    </section>
+
     <!-- About -->
-    <section id="about">
+    <section id="about" class="container">
         <h2>About Me</h2>
         <p>
-            Hi, I’m Prosper 👋, a passionate <strong>Full Stack Web Developer</strong> in training.
-            I enjoy solving problems, building projects, and continuously improving my skills.
+            Hi, I'm <strong>Prosper</strong> - an aspiring Full Stack Web Developer. I build responsive, accessible,
+            user-friendly web apps and continuously learn new tools and techniques.
         </p>
 
+        <!-- Skills -->
+        <section id="Skills" class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skills">
+                    <p class="skill-name">HTML</p>
+                    <div class="bar">
+                        <div class="progress" data-skill="90"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p class="skill-name">CSS</p>
+                    <div class="bar">
+                        <div class="progress" data-skill="85"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p class="skill-name">JavaScript</p>
+                    <div class="bar">
+                        <div class="progress" data-skill="80"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <h3>Hobbies</h3>
         <ul>
             <li>🌍 Traveling & exploring cultures</li>
@@ -38,63 +80,91 @@
     </section>
 
     <!-- Projects -->
-    <section id="projects">
+    <section id="projects" class="container">
         <h2>Projects</h2>
+        <div class="filters">
+            <button data-filters="all" class="filter-btn active">All</button>
+            <button data-filter="web" class="filter-btn">Web</button>
+            <button data-filter="api" class="filter-btn">API</button>
+        </div>
+
         <div class="project-container">
-
-            <div class="project-card">
-
-                <h3>📝 Todo App</h3>
-                <p>A simple app to add and manage daily tasks.</p>
-                <a href="projects/todo/index.html" class="btn" target="_self">View Project</a>
+            <div class="project-card" data-category="web">
+                <h3>📝 To-Do App</h3>
+                <p>Task manager with add/complet/delete functionality.</p>
+                <a href="projects/todo/index.html" class="btn project-open" target="_self">Open</a>
             </div>
 
-            <div class="project-card">
-
+            <div class="project-card" data-category="ui">
                 <h3>🧮 Calculator</h3>
-                <p>A basic calculator that performs arithmetic operations.</p>
-                <a href="projects/calculator/index.html" class="btn" target="_self">View Project</a>
+                <p>Responsive calculator with keyboard support.</p>
+                <a href="projects/calculator/index.html" class="btn project-open" target="_self">Open</a>
             </div>
 
-            <div class="project-card">
-
-                <h3>💡 Quotes Generator</h3>
-                <p>A fun app that shows random motivational quotes.</p>
-                <a href="projects/quotes/index.html" class="btn" target="_self">View Project</a>
+            <div class="project-card" data-category="api">
+                <h3>💡Random Quotes Generator</h3>
+                <p>Generates motivational quotes (local array).</p>
+                <a href="projects/quotes/index.html" class="btn project-open" target="_self">Open</a>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-category="web">
                 <h3>🕒 Digital Clock</h3>
-                <p>A simple clock built with JavaScript Date object</p>
-                <a href="projects/clock/index.html" class="btn" target="_self">View Project</a>
+                <p>A real-time digital clock built with Data API.</p>
+                <a href="projects/clock/index.html" class="btn project-open" target="_self">Open</a>
             </div>
+        </div>
+    </section>
 
+    <!-- Testimonials -->
+    <section id="testimonials" class="container">
+        <h2>Testimonials</h2>
+        <div class="carousel">
+            <div class="testimonial active">
+                <p>"Prosper is hardworking and quick to learn."</p><span>-Mentor</span>
+            </div>
+            <div class="testimonail">
+                <p>Creative problem solver and reliable teamate.</p><span>-Peer</span>
+            </div>
+            <div class="testimonial">
+                <p>His dedication to web development is inspiring</p><span>-Client</span>
+            </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" class="container">
         <h2>Contact Me</h2>
         <form id="contactForm">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send</button>
+            <input id="name" name="name" type="text" placeholder="Your Name" required>
+            <input id="email" name="email" type="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn">Send message</button>
         </form>
 
         <!-- Social Media Links -->
         <div class="social-links">
-            <a href="https://github.com/Prosper2237" target="_self">GitHub</a>
+            <a href="https://github.com/Prosper2237" target="_blank" rel="noopener">GitHub</a>
             <a href="https://linkedin.com/in/https://www.linkedin.com/in/prosper-adogbeji-34bb6b381?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                target="_self">LinkedIn</a>
-            <a href="https://twitter.com/im_prospa" target="_self">Twitter</a>
+                target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://twitter.com/im_prospa" target="_blank" rel="noopener">Twitter</a>
         </div>
+        <a class="btn" href="cv.pdf" download>Download CV</a>
     </section>
 
     <!-- Footer -->
     <footer>
         <p>© 2025 Prosper - Full Stack Developer</p>
     </footer>
+
+    <!-- Modal (used if you want popups instead of navigation)-->
+    <div id="projectModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">x</button>
+            <h3 id="modalTitle"></h3>
+            <p id="modalText"></p>
+            <a id="madalLink" class="btn" href="#" target="_blank" rel="noopener">Open Project</a>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
